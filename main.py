@@ -1,4 +1,5 @@
-from PyQt6 import QMainWindow, QTextEdit
+from PyQt6.QtWidgets import QApplication, QMainWindow, QTextEdit, QLineEdit, QPushButton
+import sys
 
 # Create chatbot window class
 class ChatbotWindow(QMainWindow):
@@ -9,7 +10,22 @@ class ChatbotWindow(QMainWindow):
 
         # Add chat are widget
         self.chat_area = QTextEdit(self)
+        self.chat_area.setGeometry(10, 10, 480, 320)
+        self.chat_area.setReadOnly(True)
 
-# Press the green button in the gutter to run the script.
+        # Add input field widget
+        self.input_field = QLineEdit(self)
+        self.input_field.setGeometry(10, 340, 480, 40)
+
+        # Add button
+        self.button = QPushButton("Send", self)
+        self.button.setGeometry(500, 340, 100, 40)
+
+        self.show()
+
+
 if __name__ == '__main__':
-    pass
+
+    app = QApplication(sys.argv)
+    main_window = ChatbotWindow()
+    sys.exit(app.exec())
