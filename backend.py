@@ -1,9 +1,11 @@
 # For running the GPT model
 import openai
+import os
+
 
 class Chatbot:
-    # def __init__(self):
-        # openai.api_key = "sk-proj-IqH2eJGlEM3JfiEUP3oaT3BlbkFJTbcWcmMFij0ViCooavRr"
+    def __init__(self):
+        openai.api_key = os.environ.get("openai_key")
 
     def get_response(self, user_input):
         response = openai.Completion.create(
