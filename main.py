@@ -1,14 +1,14 @@
 from PyQt6.QtWidgets import QApplication, QMainWindow, QTextEdit, QLineEdit, QPushButton
 import sys
 
-# Create chatbot window class
+# Create a chatbot window class
 class ChatbotWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
         self.setMinimumSize(700, 500)
 
-        # Add chat are widget
+        # Add the chat area widget
         self.chat_area = QTextEdit(self)
         self.chat_area.setGeometry(10, 10, 480, 320)
         self.chat_area.setReadOnly(True)
