@@ -1,6 +1,7 @@
 from PyQt6.QtWidgets import QApplication, QMainWindow, QTextEdit, QLineEdit, QPushButton
 import sys
 
+
 # Create a chatbot window class
 class ChatbotWindow(QMainWindow):
     def __init__(self):
@@ -24,8 +25,7 @@ class ChatbotWindow(QMainWindow):
         self.show()
 
 
-if __name__ == '__main__':
-
+if __name__ == "__main__":
     app = QApplication(sys.argv)
     main_window = ChatbotWindow()
     sys.exit(app.exec())

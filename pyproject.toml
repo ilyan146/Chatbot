@@ -8,3 +8,9 @@ dependencies = [
     "openai>=1.78.0",
     "pyqt6>=6.9.0",
 ]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.2.0",
+    "ruff>=0.11.9",
+]
